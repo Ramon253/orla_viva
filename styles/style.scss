@@ -1,12 +1,12 @@
-$olimpus : "../assets/bg.png";
+@import "background";
 *{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+.bg{
+  width: 100%;
+
+}
 #main{
-  min-width: 100vw;
-  width: 100vw;
-  min-height:100vh;
-  background-image: url($olimpus);
 }
