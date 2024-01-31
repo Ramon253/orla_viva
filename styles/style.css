@@ -12,7 +12,6 @@
   html, body, #main {
     margin: 0;
     padding: 0;
-    height: 100%;
     overflow: hidden;
   }
   #main {
@@ -23,6 +22,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  #main .students {
+    height: 60dvh;
+    width: 70%;
   }
 }
 @media (max-width: 768px) {
@@ -44,19 +47,18 @@
 
 .students {
   display: grid;
-  place-content: center;
-  align-items: center;
+  justify-items: center;
   width: 100%;
   height: auto;
-  gap: 1rem;
-  grid-template-columns: 10% 10% 10% 10% 10%;
-  grid-template-rows: 15% 15% 15% 15%;
+  gap: 2rem;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .students div {
   display: flex;
-  padding: 1rem;
   border-radius: 1rem;
-  background: blanchedalmond;
 }
 .students div img {
   width: 100%;
