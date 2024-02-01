@@ -10,35 +10,54 @@
   width: 100%;
 
 }
-.students{
-  height: 70vh;
+
+.students {
+  height: 75vh;
 }
-.teachers{
-  height: 60vh;
+
+.teachers {
+  height: 25vh;
 }
 
 .students, .teachers {
   display: flex;
+  gap: 1rem;
   flex-flow: wrap row;
   justify-content: center;
   overflow: hidden;
 
   div {
     display: flex;
-    border-radius: 1rem;
-    width: 100px;
+    flex-direction: column;width: 150px;
     height: auto;
-    z-index: 1;
+    gap: 0.5rem;
+    align-items: center;
+    div {
+      border-radius: 1rem;
+      height: 90%;
+      z-index: 1;
+      position: relative;
 
-    img.crown{
-      width: 100%;
-      z-index: 100;
+      img {
+        position: absolute;
+        height: 100%;
+        max-width: 250px;
+        max-height: 250px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      img.crown {
+        z-index: 100;
+        max-width: 100%;
+      }
+
+      img.gif {
+        z-index: 10;
+        max-width: 75%;
+      }
+
     }
-    img.gif{
-      width: 100%;
-      z-index: 10;
-    }
-
-
   }
 }
