@@ -12,7 +12,6 @@
   html, body, #main {
     margin: 0;
     padding: 0;
-    overflow: hidden;
   }
   #main {
     background: url("../assets/bg.png") repeat-x bottom center fixed;
@@ -24,6 +23,7 @@
     gap: 3rem;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
   }
   #main .students {
     height: 60dvh;
@@ -43,20 +43,27 @@
   margin: 0;
 }
 
+header {
+  width: 100%;
+  height: 100dvh;
+  background: black;
+}
+
 .bg {
   width: 100%;
 }
 
 .students {
-  height: 75vh;
+  height: 80vh;
 }
 
 .teachers {
-  height: 25vh;
+  min-height: 20vh;
 }
 
 .students, .teachers {
   display: flex;
+  width: 100%;
   gap: 1rem;
   flex-flow: wrap row;
   justify-content: center;
@@ -66,21 +73,24 @@
   display: flex;
   flex-direction: column;
   width: 150px;
+  min-height: 10vh;
   height: auto;
   gap: 0.5rem;
   align-items: center;
+  transition: width 1000ms;
 }
 .students div div, .teachers div div {
   border-radius: 1rem;
   height: 90%;
+  min-width: 100%;
   z-index: 1;
   position: relative;
 }
 .students div div img, .teachers div div img {
   position: absolute;
   height: 100%;
-  max-width: 250px;
-  max-height: 250px;
+  max-width: 300px;
+  max-height: 300px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -92,6 +102,24 @@
 .students div div img.gif, .teachers div div img.gif {
   z-index: 10;
   max-width: 75%;
+}
+
+.students > div:hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75vh;
+  width: 75%;
+}
+
+.teachers > div:hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75vh;
+  width: 75%;
 }
 
 /*# sourceMappingURL=style.css.map */

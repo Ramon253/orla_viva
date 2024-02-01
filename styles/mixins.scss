@@ -1,0 +1,10 @@
+@mixin addHover {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75vh;
+  width: 75%;
+
+}

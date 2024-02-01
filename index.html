@@ -9,8 +9,8 @@
     <title>Orla</title>
 </head>
 <body>
+<header></header>
 <section id="main">
-
     <main class="teachers">
 
         <div>
@@ -47,8 +47,10 @@
             <span>Name</span>
         </div>
         <div>
-            <div><img class="crown" src="/assets/laurel-wreath-png.png" alt="Profesores">
-                <img class="gif" src="assets/sinFondo/profesores/CRISTINACARMEN-unscreen.gif" alt=""></div>
+            <div>
+                <img class="crown" src="/assets/laurel-wreath-png.png" alt="Profesores">
+                <img class="gif" src="assets/sinFondo/profesores/CRISTINACARMEN-unscreen.gif" alt="">
+            </div>
             <span>Name</span>
         </div>
         <div>
@@ -201,12 +203,18 @@
         <div>
             <div class="">
                 <img class="crown" src="/assets/laurel-wreath-png.png" alt="Estudent">
-                <img class="gif" src="assets/sinFondo/alumnos/SANCHEZ-unscreen.gif" alt="">
+                <img class="gif" src="" id="sanchez" alt="">
             </div>
             <span>Name</span>
         </div>
 
     </main>
 </section>
+<script>
+    setTimeout(() =>{
+        document.getElementById('sanchez').src = "assets/sinFondo/alumnos/SANCHEZ-unscreen.gif"
+
+    }, 4300)
+</script>
 </body>
 </html>
