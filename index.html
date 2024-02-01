@@ -9,8 +9,8 @@
     <title>Orla</title>
 </head>
 <body>
+<header></header>
 <section id="main">
-
     <main class="teachers">
 
         <div>
@@ -189,7 +189,7 @@
         <div>
             <div class="">
                 <img class="crown" src="/assets/laurel-wreath-png.png" alt="Estudent">
-                <img class="gif" src="assets/sinFondo/alumnos/SANCHEZ-unscreen.gif" alt="">
+                <img class="gif" src="./assets/sinFondo/alumnos/SANCHEZ-unscreen.gif" id="sanchez" alt="">
             </div>
             <span>Gonzalo Sánchez </span>
         </div>
@@ -209,5 +209,11 @@
         </div>
     </main>
 </section>
+<script>
+    setTimeout(() =>{
+        document.getElementById('sanchez').src = "assets/sinFondo/alumnos/SANCHEZ-unscreen.gif"
+
+    }, 4300)
+</script>
 </body>
 </html>
