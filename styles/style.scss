@@ -9,13 +9,87 @@
   font-family: 'Roboto', sans-serif;
 }
 
-#headerText {
+#mainHeader {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
+  #headerText {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+    place-items: center ;
+    gap: 1rem;
+    #presentationText {
+      animation: showup 7s infinite;
+      font-size: 2rem;
+    }
 
+    #secondDiv {
+      width: 0px;
+      animation: reveal 7s infinite;
+    }
+
+    #bodyText {
+      margin-left: -300px;
+      font-size: 2rem;
+      animation: slidein 7s infinite;
+    }
+
+    @keyframes showup {
+      0% {
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes slidein {
+      0% {
+        margin-left: -800px;
+      }
+      20% {
+        margin-left: -800px;
+      }
+      35% {
+        margin-left: 0;
+      }
+      100% {
+        margin-left: 0;
+      }
+    }
+
+    @keyframes reveal {
+      0% {
+        opacity: 0;
+        width: 0px;
+      }
+      20% {
+        opacity: 1;
+        width: 0px;
+      }
+      30% {
+        width: 355px;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        width: 355px;
+      }
+    }
+
+  }
   a {
     display: flex;
     align-items: center;
@@ -28,7 +102,7 @@
   }
 }
 
-header {
+#header {
 
   background-image: url("../assets/header-bg.webp");
   z-index: 1;
