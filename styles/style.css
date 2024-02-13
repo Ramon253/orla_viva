@@ -9,6 +9,8 @@
   background-repeat:no-repeat ;
   background-size: cover;
 }*/
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap");
 html,
 body,
 #main {
@@ -38,18 +40,30 @@ body,
   padding: 0;
   margin: 0;
   overflow: hidden;
-  font-family: "Roboto", sans-serif;
 }
 
 #mainHeader {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100vw;
+  min-height: 100vh;
+  gap: 5rem;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  flex-direction: column;
   transform: translate(-50%, -50%);
   z-index: 100;
+  font-family: "Alegreya", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  font-style: italic;
 }
 #mainHeader #headerText {
-  width: 100%;
+  width: 35vw;
+  flex-wrap: wrap;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,30 +72,32 @@ body,
   gap: 1rem;
 }
 #mainHeader #headerText #presentationText {
-  animation: showup 7s infinite;
-  font-size: 2rem;
+  animation: showup 7s forwards;
 }
 #mainHeader #headerText #secondDiv {
-  width: 0px;
-  animation: reveal 7s infinite;
+  width: 0;
+  animation: reveal 7s forwards;
 }
 #mainHeader #headerText #bodyText {
   margin-left: -300px;
-  font-size: 2rem;
-  animation: slidein 7s infinite;
+  animation: slidein 7s forwards;
 }
 @keyframes showup {
   0% {
     opacity: 0;
+    width: 25vw;
   }
   20% {
     opacity: 1;
+    width: 25vw;
   }
   80% {
     opacity: 1;
+    width: 25vw;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
+    width: 25vw;
   }
 }
 @keyframes slidein {
@@ -101,21 +117,21 @@ body,
 @keyframes reveal {
   0% {
     opacity: 0;
-    width: 0px;
+    width: 0;
   }
   20% {
     opacity: 1;
-    width: 0px;
+    width: 0;
   }
   30% {
-    width: 355px;
+    width: 35vw;
   }
   80% {
     opacity: 1;
   }
   100% {
-    opacity: 0;
-    width: 355px;
+    opacity: 1;
+    width: 35vw;
   }
 }
 #mainHeader a {
@@ -163,10 +179,6 @@ body {
   min-height: 20vh;
 }
 
-span {
-  text-align: center;
-}
-
 .students, .teachers > * {
   overflow: hidden;
 }
@@ -179,12 +191,24 @@ main a img {
 
 .students,
 .teachers {
+  font-weight: 750;
+  font-family: "Alegreya SC", sans-serif;
   display: flex;
   width: 100%;
   gap: 1rem;
   flex-flow: wrap row;
   justify-content: center;
   overflow: hidden;
+}
+.students span,
+.teachers span {
+  text-align: center;
+  display: flex;
+  place-content: center;
+  align-content: center;
+  backdrop-filter: blur(5px);
+  padding: 0.2rem;
+  border-radius: 1rem;
 }
 .students div:hover div:not(hover),
 .teachers div:hover div:not(hover) {
@@ -202,7 +226,7 @@ main a img {
   border-width: 3rem;
   backdrop-filter: blur(20px);
   animation-name: desvanecer;
-  animation-duration: 1.5s; /* Duración de la animación */
+  animation-duration: 2s; /* Duración de la animación */
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* Curva de Bezier */
 }
 @keyframes desvanecer {
@@ -210,7 +234,7 @@ main a img {
     opacity: 0;
   }
   /* Comienza con opacidad 0 */
-  25% {
+  30% {
     opacity: 0;
   }
   100% {
@@ -226,11 +250,15 @@ main a img {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 10vh;
+  display: flex;
+  place-content: center;
+  place-items: center;
   width: 200px;
   z-index: 1000000;
   font-size: 1.5rem;
   transition-delay: 5000ms;
-  transition: 500ms;
+  transition: 750ms;
+  border-radius: 50%;
 }
 .students div,
 .teachers div {
